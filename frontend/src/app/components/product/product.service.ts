@@ -9,8 +9,10 @@ import { map, catchError } from "rxjs/operators";
   providedIn: "root",
 })
 export class ProductService {
-  baseUrl = "http://localhost:3000/products";
-
+  //json server
+  //baseUrl = "http://localhost:3000/products";
+  //laravel
+  baseUrl = "http://localhost:8000/api/products"
   constructor(private snackBar: MatSnackBar, private http: HttpClient) {}
 
   showMessage(msg: string, isError: boolean = false): void {
