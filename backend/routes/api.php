@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //products
 //metodos padrão crud get put post etc etc
 Route::apiResource('products',$ProductController);
+Route::get('products/service/abcde',$ProductController.'@abcde');
