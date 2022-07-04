@@ -1,7 +1,10 @@
-
-<button mat-raised-button (click)="navigateToProductCreate()"
-    color="primary">
-    Novo Produto
+<button mat-raised-button (click)="navigateToProductCreate()" color="primary">
+  Novo Produto
 </button>
-
+<form>
+  <mat-form-field>
+    <input matInput placeholder="Nome" />
+  </mat-form-field>
+</form>
+<button mat-raised-button color="primary">Pesquisar</button>
 <app-product-read></app-product-read>
