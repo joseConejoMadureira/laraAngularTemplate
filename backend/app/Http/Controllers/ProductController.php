@@ -88,4 +88,8 @@ class ProductController extends Controller
     {
         //
     }
+    public function abcde(){
+        return json_encode("teste");
+    }
+    
 }
