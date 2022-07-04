@@ -1,15 +1,15 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist
-/tmp
-/out-tsc
+frontend/dist
+frontend/tmp
+frontend/out-tsc
 # Only exists if Bazel was run
-/bazel-out
+frontend/bazel-out
 
 # dependencies
-/node_modules
-
+frontend/node_modules
+node_modules
 # profiling files
 chrome-profiler-events*.json
 speed-measure-plugin*.json
@@ -44,3 +44,19 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+frontend/node_modules
+banckend/public/build
+banckend/public/hot
+banckend/public/storage
+banckend/storage/*.key
+banckend/vendor
+banckend/.env
+banckend/.env.backup
+banckend/.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/.idea
+/.vscode
