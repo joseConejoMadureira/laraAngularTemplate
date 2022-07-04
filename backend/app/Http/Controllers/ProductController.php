@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\DAO\ProductDAO;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class ProductController extends Controller
 {
@@ -15,6 +16,7 @@ class ProductController extends Controller
      */
     public function index()
     {
+        Log::debug('log debug');
         $product =  new ProductDAO();
         return $product->all();
     }
@@ -71,7 +73,9 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+       
+        
+
     }
 
     /**
