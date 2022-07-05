@@ -48,9 +48,6 @@ class ProductController extends Controller
         $product = $this->product->find($id);
         return $product;
     }
-
-
-
     /**
      * Update the specified resource in storage.
      *
