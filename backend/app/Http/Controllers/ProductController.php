@@ -54,7 +54,8 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        Log::debug('show');
+        Log::debug('show: ' . $product);
+
         return $product;
     }
 
@@ -80,6 +81,8 @@ class ProductController extends Controller
     {
 
         Log::debug('update');
+        $product->update($request->all());
+        return $product;
     }
 
     /**
@@ -91,6 +94,8 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         Log::debug('destroy');
+        $product->delete();
+
     }
     public function abcde()
     {
