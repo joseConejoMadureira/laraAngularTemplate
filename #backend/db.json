@@ -19,6 +19,11 @@
       "name": "lapiz azul",
       "price": "1",
       "id": 6
+    },
+    {
+      "name": "teste",
+      "price": "1",
+      "id": 7
     }
   ]
 }

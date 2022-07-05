@@ -16,7 +16,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        Log::debug('log debug');
+        Log::debug('index');
         $product =  new ProductDAO();
         return $product->all();
     }
@@ -28,7 +28,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        Log::debug('create');
     }
 
     /**
@@ -37,9 +37,9 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request )
     {
-        //
+        Log::debug('store');
     }
 
     /**
@@ -50,7 +50,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return $product; 
+        Log::debug('show');
     }
 
     /**
@@ -61,7 +61,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        Log::debug('edit');
     }
 
     /**
@@ -74,7 +74,7 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
        
-        
+        Log::debug('update');
 
     }
 
@@ -86,7 +86,7 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        Log::debug('destroy');
     }
     public function abcde(){
         return json_encode("teste");
