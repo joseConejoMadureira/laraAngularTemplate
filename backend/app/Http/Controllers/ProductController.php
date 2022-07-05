@@ -37,12 +37,11 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request )
+    public function store(Request $request)
     {
         Log::debug($request->all());
-       $product =  Product::create($request->all());
+        $product =  Product::create($request->all());
         Log::debug('store');
-        
         return  $product;
     }
 
@@ -77,9 +76,8 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-       
-        Log::debug('update');
 
+        Log::debug('update');
     }
 
     /**
@@ -92,8 +90,8 @@ class ProductController extends Controller
     {
         Log::debug('destroy');
     }
-    public function abcde(){
+    public function abcde()
+    {
         return json_encode("teste");
     }
-    
 }
