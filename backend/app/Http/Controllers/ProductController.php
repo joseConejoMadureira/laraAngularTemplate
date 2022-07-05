@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Log;
 
 class ProductController extends Controller
 {
+    public function __construct(Product $product)
+    {
+        $this->product = $product;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -17,14 +21,9 @@ class ProductController extends Controller
     public function index()
     {
         Log::debug('index');
-        $product =  new Product();
-        $product = $product::all()->sortBy('id');
-        return $product;
+       
+        return $this->product->all();
     }
-
-    
-    
-
     /**
      * Store a newly created resource in storage.
      *
@@ -33,54 +32,51 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $product =  Product::create($request->all());
-        Log::debug('store');
-
-        return  $product;
+        //$marca = Marca::create($request->all());
+        $product = $this->product->create($request->all());
+        return $product;
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Product  $product
+     * @param  Integer
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show($id)
     {
-        Log::debug('show: ' . $product);
-
+        $product = $this->product->find($id);
         return $product;
     }
 
-    
-    
+
+
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Product  $product
+     * @param  Integer
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, $id)
     {
 
-        Log::debug('update');
+        $product = $this->product->find($id);
         $product->update($request->all());
         return $product;
     }
-
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Product  $product
+     * @param  Integer
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy($id)
     {
-        Log::debug('destroy');
+        $product = $this->product->find($id);
         $product->delete();
-
     }
+
     public function abcde()
     {
         return json_encode("teste");
