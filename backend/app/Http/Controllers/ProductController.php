@@ -33,7 +33,7 @@ class ProductController extends Controller
     {
         //$marca = Marca::create($request->all());
         $product = $this->product->create($request->all());
-        
+
         return response()->json($product, 201);
     }
     /**
@@ -44,10 +44,10 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        $product = $this->product->find($id);        
-        if($product === null) {
-            return response()->json(['erro' => 'Recurso  não existe'], 404) ;
-        } 
+        $product = $this->product->find($id);
+        if ($product === null) {
+            return response()->json(['erro' => 'Recurso  não existe'], 404);
+        }
 
         return response()->json($product, 200);
     }
@@ -62,11 +62,11 @@ class ProductController extends Controller
     {
 
         $product = $this->product->find($id);
-        if($product === null) {
-            return response()->json(['erro' => 'Recurso  não existe'], 404) ;
-        } 
+        if ($product === null) {
+            return response()->json(['erro' => 'Recurso  não existe'], 404);
+        }
         $product->update($request->all());
-        
+
         return response()->json($product, 200);
     }
     /**
@@ -78,9 +78,9 @@ class ProductController extends Controller
     public function destroy($id)
     {
         $product = $this->product->find($id);
-        if($product === null) {
-            return response()->json(['erro' => 'Recurso  não existe'], 404) ;
-        } 
+        if ($product === null) {
+            return response()->json(['erro' => 'Recurso  não existe'], 404);
+        }
         $product->delete();
         return response()->json(['msg' => 'removido com sucesso!'], 200);
     }
