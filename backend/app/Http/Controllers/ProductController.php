@@ -18,19 +18,12 @@ class ProductController extends Controller
     {
         Log::debug('index');
         $product =  new Product();
-        $product = $product::all();
+        $product = $product::all()->sortBy('id');
         return $product;
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        Log::debug('create');
-    }
+    
+    
 
     /**
      * Store a newly created resource in storage.
@@ -59,17 +52,8 @@ class ProductController extends Controller
         return $product;
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Product $product)
-    {
-        Log::debug('edit');
-    }
-
+    
+    
     /**
      * Update the specified resource in storage.
      *
