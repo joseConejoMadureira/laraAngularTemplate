@@ -39,6 +39,7 @@ class ProductController extends Controller
      */
     public function store(Request $request )
     {
+        Log::debug($request->all());
        $product =  Product::create($request->all());
         Log::debug('store');
         
