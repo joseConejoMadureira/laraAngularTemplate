@@ -12,7 +12,7 @@ export class ProductService {
   //json server
   //baseUrl = "http://localhost:3000/products";
   //laravel
-  baseUrl = "http://localhost:8000/api/products/"
+  baseUrl = "http://localhost:8000/api/products"
   constructor(private snackBar: MatSnackBar, private http: HttpClient) {}
 
   showMessage(msg: string, isError: boolean = false): void {
