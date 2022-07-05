@@ -21,8 +21,7 @@ class ProductController extends Controller
     public function index()
     {
         Log::debug('index');
-       
-        return $this->product->all();
+        return response()->json($this->product->all(), 200);
     }
     /**
      * Store a newly created resource in storage.
@@ -34,9 +33,9 @@ class ProductController extends Controller
     {
         //$marca = Marca::create($request->all());
         $product = $this->product->create($request->all());
-        return $product;
+        
+        return response()->json($product, 201);
     }
-
     /**
      * Display the specified resource.
      *
@@ -45,8 +44,12 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        $product = $this->product->find($id);
-        return $product;
+        $product = $this->product->find($id);        
+        if($product === null) {
+            return response()->json(['erro' => 'Recurso  não existe'], 404) ;
+        } 
+
+        return response()->json($product, 200);
     }
     /**
      * Update the specified resource in storage.
@@ -59,8 +62,12 @@ class ProductController extends Controller
     {
 
         $product = $this->product->find($id);
+        if($product === null) {
+            return response()->json(['erro' => 'Recurso  não existe'], 404) ;
+        } 
         $product->update($request->all());
-        return $product;
+        
+        return response()->json($product, 200);
     }
     /**
      * Remove the specified resource from storage.
@@ -71,9 +78,12 @@ class ProductController extends Controller
     public function destroy($id)
     {
         $product = $this->product->find($id);
+        if($product === null) {
+            return response()->json(['erro' => 'Recurso  não existe'], 404) ;
+        } 
         $product->delete();
+        return response()->json(['msg' => 'removido com sucesso!'], 200);
     }
-
     public function abcde()
     {
         return json_encode("teste");
