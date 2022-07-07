@@ -9,5 +9,9 @@ class Product extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    protected $fillable = ['id','name', 'price'];
+    protected $fillable = ['id', 'name', 'price'];
+    public function rules()
+    {
+        return  ['name' => 'required|', 'price' => 'required'];
+    }
 }

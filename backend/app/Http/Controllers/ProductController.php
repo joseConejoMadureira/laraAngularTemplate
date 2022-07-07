@@ -31,7 +31,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //$marca = Marca::create($request->all());
+        $request->validate($this->product->rules());
         $product = $this->product->create($request->all());
 
         return response()->json($product, 201);
@@ -60,6 +60,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate($this->product->rules());
 
         $product = $this->product->find($id);
         if ($product === null) {
@@ -77,6 +78,7 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
+        
         $product = $this->product->find($id);
         if ($product === null) {
             return response()->json(['erro' => 'Recurso  não existe'], 404);
