@@ -1,18 +1,9 @@
 <?php
 
-namespace App\Repositorfa;
+namespace App\Repositories;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ProductRepository
+class ProductRepository extends AbstractRepository
 {
-    public function __construct(Model $model)
-    {
-        $this->model = $model;
-    }
-    public function get()
-    {
-
-        return $this->model;
-    }
 }
