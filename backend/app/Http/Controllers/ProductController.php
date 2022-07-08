@@ -50,7 +50,6 @@ class ProductController extends Controller
         if ($product === null) {
             return response()->json(['erro' => 'Recurso  não existe'], 404);
         }
-
         return response()->json($product, 200);
     }
     /**
