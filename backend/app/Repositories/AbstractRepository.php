@@ -12,7 +12,6 @@ abstract class AbstractRepository
     }
     public function get()
     {
-
         return $this->model;
     }
 }
