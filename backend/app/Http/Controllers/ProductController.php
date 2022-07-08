@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\DAO\ProductDAO;
 use App\Models\Product;
+use App\Repositories\ProductRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
@@ -12,6 +13,7 @@ class ProductController extends Controller
     public function __construct(Product $product)
     {
         $this->product = $product;
+        $this->productRepository = new ProductRepository($this->product);
     }
     /**
      * Display a listing of the resource.
@@ -21,7 +23,7 @@ class ProductController extends Controller
     public function index()
     {
         Log::debug('index');
-        return response()->json($this->product->all(), 200);
+        return response()->json($this->productRepository->getAll(), 200);
     }
     /**
      * Store a newly created resource in storage.

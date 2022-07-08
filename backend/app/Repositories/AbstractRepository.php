@@ -10,10 +10,9 @@ abstract class AbstractRepository
     {
         $this->model = $model;
     }
-    public function get()
+    public function getAll()
     {
-        return $this->model;
+        return $this->model->all();
     }
 }
- 
 ?>
