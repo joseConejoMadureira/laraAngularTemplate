@@ -14,5 +14,10 @@ abstract class AbstractRepository
     {
         return $this->model->all();
     }
+    public function create($model)
+    {
+        return $this->model->create($model);
+    }
+   
 }
 ?>
