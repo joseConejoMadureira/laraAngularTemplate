@@ -66,7 +66,7 @@ class ProductController extends Controller
         if ($product === null) {
             return response()->json(['erro' => 'Recurso  não existe'], 404);
         }
-        $this->productRepository->update($id,$request->all());
+        $this->productRepository->update($id, $request->all());
 
         return response()->json($product, 200);
     }
@@ -78,13 +78,13 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        
+
         $product = $this->product->find($id);
         if ($product === null) {
             return response()->json(['erro' => 'Recurso  não existe'], 404);
         }
         $this->productRepository->delete($product);
-        
+
         return response()->json(['msg' => 'removido com sucesso!'], 200);
     }
     public function abcde()
