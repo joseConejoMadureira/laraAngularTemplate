@@ -26,5 +26,12 @@ abstract class AbstractRepository
     {
         return $this->model->find($id);
     }
+    
+    public function update($id, $model )
+    {
+       $this->model =  $this->find($id);
+       $this->model->update($model); 
+       
+    }
 }
 ?>

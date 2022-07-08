@@ -61,13 +61,12 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $product = $this->productRepository->find($id);
         $request->validate($this->product->rules());
-
-        $product = $this->product->find($id);
         if ($product === null) {
             return response()->json(['erro' => 'Recurso  não existe'], 404);
         }
-        $product->update($request->all());
+        $this->productRepository->update($id,$request->all());
 
         return response()->json($product, 200);
     }
