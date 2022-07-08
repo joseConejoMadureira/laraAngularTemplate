@@ -46,7 +46,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        $product = $this->product->find($id);
+        $product = $this->productRepository->find($id);
         if ($product === null) {
             return response()->json(['erro' => 'Recurso  não existe'], 404);
         }
