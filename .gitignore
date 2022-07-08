@@ -60,3 +60,7 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+
+/#backend/node_modules
+/#backend/npm-debug.log
+/#backend/yarn-error.log
