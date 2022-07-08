@@ -85,7 +85,8 @@ class ProductController extends Controller
         if ($product === null) {
             return response()->json(['erro' => 'Recurso  não existe'], 404);
         }
-        $product->delete();
+        $this->productRepository->delete($product);
+        
         return response()->json(['msg' => 'removido com sucesso!'], 200);
     }
     public function abcde()

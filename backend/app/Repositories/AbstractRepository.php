@@ -18,6 +18,9 @@ abstract class AbstractRepository
     {
         return $this->model->create($model);
     }
-   
+    public function delete(Model $model)
+    {
+        return $model->delete();
+    }
 }
 ?>
