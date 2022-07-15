@@ -20,13 +20,12 @@
 | ------ | ------ | ------ | ------ |------ |
 | GET | api/products| |   JSON     | Retorna todos produtos criados.
 | GET | api/products/{product}  | **id**  `*` |   JSON     | Retorna  produto selecionado. 
-| POST | api/products/ |**name**  `*` |JSON | Cria um novo produto. 
-| |  | **price**  `*`             |         |
-| PUT | api/products/{product}  |**id**  `*` | JSON |Altera informações de um produto.         |  
-|  | | **name**  |
-|  |  | **price**  |
-| `DELETE` |   api/products/{product}   | **id**  `*` | JSON |Deleta um produto.
-| `log-viewer` |   log-viewer  | **id**  `*` | JSON |Deleta um produto.
+| POST | api/products/ |**{product}**  `*` |JSON | Cria um novo produto. 
+|            |         |
+| PUT | api/products/{product}  |**{product}**  `*` | JSON |Altera informações de um produto.         |  
+| 
+| `DELETE` |   api/products/{product}   | **{product}**  `*` | JSON |Deleta um produto.
+| `log-viewer` |   log-viewer  |  |  |log-viewer
 ## PREVIEW
 
 ![preview](https://github.com/joseEstudos/laraAngularTemplate/blob/91dffef34b7083650c323a139dddeba7d6117499/summary/prints/produtos.png)
