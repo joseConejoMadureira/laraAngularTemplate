@@ -8,8 +8,11 @@
 | Tecnologia  | Versão |
 | ------ | ------ |
 | PHP | 8.1.8 |
+| LARAVEL | 9.19 |
 | ANGULAR | 9.1.0 |
 | PostgreSQL | 14.4  |
+
+
 ## ROUTES 
 
 ### Produtos
