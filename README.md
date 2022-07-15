@@ -26,10 +26,10 @@
 
 ## PREVIEW
 
-![preview](https://github.com/joseEstudos/phpAngularTemplate/blob/f5d6d158823b8c5c1969b0231444ff3e091ca4b5/summary/prints/produtos.png)
+![preview](https://github.com/joseEstudos/laraAngularTemplate/blob/91dffef34b7083650c323a139dddeba7d6117499/summary/prints/produtos.png)
 
-![preview](https://github.com/joseEstudos/phpAngularTemplate/blob/f5d6d158823b8c5c1969b0231444ff3e091ca4b5/summary/prints/novoProduto.png)
+![preview](https://github.com/joseEstudos/laraAngularTemplate/blob/91dffef34b7083650c323a139dddeba7d6117499/summary/prints/novoProduto.png)
 
-![preview](https://github.com/joseEstudos/phpAngularTemplate/blob/f5d6d158823b8c5c1969b0231444ff3e091ca4b5/summary/prints/excluirProduto.png)
+![preview](https://github.com/joseEstudos/laraAngularTemplate/blob/91dffef34b7083650c323a139dddeba7d6117499/summary/prints/excluirProduto.png)
 
-![preview](https://github.com/joseEstudos/phpAngularTemplate/blob/f5d6d158823b8c5c1969b0231444ff3e091ca4b5/summary/prints/editarProduto.png)
+![preview](https://github.com/joseEstudos/laraAngularTemplate/blob/91dffef34b7083650c323a139dddeba7d6117499/summary/prints/editarProduto.png)
