@@ -18,15 +18,15 @@
 ### Produtos
 | Método | Rota | Parâmetros | Tipo  | Descrição
 | ------ | ------ | ------ | ------ |------ |
-| GET | /backend/index.php/product/read | |   JSON     | Retorna todos produtos criados.
-| GET | /backend/index.php/product/readById/| **id**  `*` |   JSON     | Retorna  produto selecionado. 
-| POST | /backend/index.php/product/create |**name**  `*` |JSON | Cria um novo produto. 
+| GET | api/products| |   JSON     | Retorna todos produtos criados.
+| GET | api/products/{product}  | **id**  `*` |   JSON     | Retorna  produto selecionado. 
+| POST | api/products/ |**name**  `*` |JSON | Cria um novo produto. 
 | |  | **price**  `*`             |         |
-| PUT | /backend/index.php/product/update  |**id**  `*` | JSON |Altera informações de um produto.         |  
+| PUT | api/products/{product}  |**id**  `*` | JSON |Altera informações de um produto.         |  
 |  | | **name**  |
 |  |  | **price**  |
-| `DELETE` |  /backend/index.php/product/delete  | **id**  `*` | JSON |Deleta um produto.
-
+| `DELETE` |   api/products/{product}   | **id**  `*` | JSON |Deleta um produto.
+| `log-viewer` |   log-viewer  | **id**  `*` | JSON |Deleta um produto.
 ## PREVIEW
 
 ![preview](https://github.com/joseEstudos/laraAngularTemplate/blob/91dffef34b7083650c323a139dddeba7d6117499/summary/prints/produtos.png)
