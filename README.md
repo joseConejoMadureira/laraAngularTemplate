@@ -29,7 +29,7 @@
 
 ### Produtos
 | ID  | NAME | PRICE |
-
+| ------ | ------ |------ |
 ## PREVIEW
 
 ![preview](https://github.com/joseEstudos/laraAngularTemplate/blob/91dffef34b7083650c323a139dddeba7d6117499/summary/prints/produtos.png)
