@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\DAO\ProductDAO;
 use App\Models\Product;
 use App\Repositories\ProductRepository;
 use Illuminate\Http\Request;
