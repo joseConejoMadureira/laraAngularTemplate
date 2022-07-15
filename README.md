@@ -24,6 +24,12 @@
 | PUT | api/products/  |**product**  `*` | JSON |Altera informações de um produto.         |  
 | `DELETE` |   api/products/{product}   | **product**  `*` | JSON |Deleta um produto.
 | `log-viewer` |   log-viewer  |  |  |log-viewer
+
+## MODELS 
+
+### Produtos
+| ID  | NAME | PRICE |
+
 ## PREVIEW
 
 ![preview](https://github.com/joseEstudos/laraAngularTemplate/blob/91dffef34b7083650c323a139dddeba7d6117499/summary/prints/produtos.png)
