@@ -27,7 +27,7 @@
 
 ## MODELS 
 
-### Produtos
+### Products
 | ID  | NAME | PRICE |
 | ------ | ------ |------ |
 ## PREVIEW
