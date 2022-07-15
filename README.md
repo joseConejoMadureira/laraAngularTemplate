@@ -21,7 +21,6 @@
 | GET | api/products|                     |   JSON     | Retorna todos produtos criados.
 | GET | api/products/ | **product**  `*` |   JSON     | Retorna  produto selecionado. 
 | POST | api/products/ |**product**  `*` |JSON | Cria um novo produto. 
-|            |         |
 | PUT | api/products/  |**product**  `*` | JSON |Altera informações de um produto.         |  
 | `DELETE` |   api/products/{product}   | **product**  `*` | JSON |Deleta um produto.
 | `log-viewer` |   log-viewer  |  |  |log-viewer
