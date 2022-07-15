@@ -1,4 +1,4 @@
-# php Angular Template
+# PHP Laravel Angular Template
 ### template de desenvolvimento. 
 
 <p>Template para reutilização:  php laravel restful api</p>
