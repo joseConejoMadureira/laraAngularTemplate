@@ -85,7 +85,7 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        Log::info('ProductController@destroy id'.$id );
+        Log::info('ProductController@destroy id: '.$id );
         $product = $this->product->find($id);
         Log::info('ProductController@destroy product'.json_encode($product));
         if ($product === null) {
