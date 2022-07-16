@@ -13,6 +13,8 @@ class ProductController extends Controller
     {
         $this->product = $product;
         $this->productRepository = new ProductRepository($this->product);
+        
+       
     }
     /**
      * Display a listing of the resource.
@@ -32,7 +34,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        Log::info('ProductController@store');
+        Log::info('ProductController@store: Request:'.json_encode($request->all()) );
         $request->validate($this->product->rules());
         $product = $this->productRepository->create($request->all());
 
@@ -46,9 +48,10 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        Log::info('ProductController@show');
+        Log::info('ProductController@show id:'.$id);
         $product = $this->productRepository->find($id);
         if ($product === null) {
+            Log::info('ProductController@show $product:'. json_encode($product));
             return response()->json(['erro' => 'Recurso  não existe'], 404);
         }
         return response()->json($product, 200);
@@ -62,9 +65,11 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        Log::info('ProductController@update');
+        Log::info('ProductController@update Request'. json_encode($request) );
+        
         $product = $this->productRepository->find($id);
         $request->validate($this->product->rules());
+        Log::info('ProductController@update product'. json_encode($product) );
         if ($product === null) {
             return response()->json(['erro' => 'Recurso  não existe'], 404);
         }
@@ -80,8 +85,9 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        Log::info('ProductController@destroy');
+        Log::info('ProductController@destroy id'.$id );
         $product = $this->product->find($id);
+        Log::info('ProductController@destroy product'.json_encode($product));
         if ($product === null) {
             return response()->json(['erro' => 'Recurso  não existe'], 404);
         }
