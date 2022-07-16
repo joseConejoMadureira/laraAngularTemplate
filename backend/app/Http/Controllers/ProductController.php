@@ -21,7 +21,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        Log::debug('index');
+        Log::info('ProductController@index');
         return response()->json($this->productRepository->getAll(), 200);
     }
     /**
@@ -32,6 +32,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        Log::info('ProductController@store');
         $request->validate($this->product->rules());
         $product = $this->productRepository->create($request->all());
 
@@ -45,6 +46,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
+        Log::info('ProductController@show');
         $product = $this->productRepository->find($id);
         if ($product === null) {
             return response()->json(['erro' => 'Recurso  não existe'], 404);
@@ -60,6 +62,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
+        Log::info('ProductController@update');
         $product = $this->productRepository->find($id);
         $request->validate($this->product->rules());
         if ($product === null) {
@@ -77,7 +80,7 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-
+        Log::info('ProductController@destroy');
         $product = $this->product->find($id);
         if ($product === null) {
             return response()->json(['erro' => 'Recurso  não existe'], 404);
