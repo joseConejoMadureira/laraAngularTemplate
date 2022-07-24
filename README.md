@@ -11,7 +11,7 @@
 | LARAVEL | 9.19 |
 | ANGULAR | 9.1.0 |
 | PostgreSQL | 14.4  |
-
+| telescope  |  4.9  |
 
 ## ROUTES 
 
@@ -24,7 +24,7 @@
 | PUT | api/products/  |**product**  `*`    |                JSON     |Altera informações de um     produto.         |  
 | `DELETE` |   api/products/{product}    |  **id**  `*` |        JSON         |           Deleta um produto.
 | `log-viewer` |   log-viewer           |                  |                     |log-viewer
-
+| `telescope` |   telescope           |                  |                     |telescope
 ## MODELS 
 
 ### Products
